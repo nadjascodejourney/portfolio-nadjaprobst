@@ -6,6 +6,7 @@ This project aims to develop a personal portfolio that showcases 3D webgraphics 
 ## To Do´s:
 [ ]  Create a timeline and set milestones with github Projects 
 [✔️]  Read the Documentation of React Three Fiber
+[ ]  test branches to try out code
 [✔️]  Content Creation
 [ ]  Layout and Design with Figma
 [ ]  Create a Prototype with Figma which is ready for Dev-Production
