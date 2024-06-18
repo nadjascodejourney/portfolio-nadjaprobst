@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import Experience from "./Experience.jsx";
 import * as THREE from "three";
+import { Perf } from "r3f-perf";
 
 function App() {
   const cameraSettings = {
@@ -23,6 +24,8 @@ function App() {
       orthographic={false}
       camera={cameraSettings}
     >
+      <Perf position="top-left" />{" "}
+      {/* performance monitor; you could integrate it in leva debug ui => see lesson threejs journey */}
       <Experience />
     </Canvas>
   );
