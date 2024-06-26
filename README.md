@@ -9,8 +9,8 @@ This project aims to develop a personal portfolio that showcases 3D webgraphics 
 [ ]  Learn GSAP for Animations
 [ ]  test branches to try out code
 [✔️]  Content Creation
-[✔️]  Layout and Design with Figma: [Click here to see the layout](https://www.figma.com/design/dRQOMsktpYXnf3HAGKaMCI/Portfoliosite?node-id=61-217&m=dev)
-[ ]  Create a Prototype with Figma which is ready for Dev-Production
+[✔️]  [Layout and Design in Figma](https://www.figma.com/design/dRQOMsktpYXnf3HAGKaMCI/Portfoliosite?node-id=61-217&m=dev)
+[ ]  Create a Prototype in Figma which is ready for Dev-Production
 [✔️]  Web-Optimization of the Imagery 
 [✔️]  Create a Repository and Set up the development environment
 [ ]  Create basic codestructure of the portfolio (Routing, State Management, UI Components, Animations, etc.)
