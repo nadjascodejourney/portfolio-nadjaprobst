@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import * as THREE from "three";
+import ThreeScene from "./components/ThreeScene";
 
 function App() {
   const cameraSettings = {
@@ -25,6 +26,7 @@ function App() {
       }}
     >
       <color attach="background" args={["#f0f0f0"]} />
+      <ThreeScene />
     </Canvas>
   );
 }
