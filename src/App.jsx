@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Canvas } from "@react-three/fiber";
+import "./App.css";
+import * as THREE from "three";
+import ThreeScene from "./components/ThreeScene";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cameraSettings = {
+    position: [3, 1, 5],
+    fov: 45,
+    near: 0.1,
+    far: 200,
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Canvas // component from R3F; wrapper around native Three renderer
+      gl={{
+        // WebGLRenderer settings
+        antialias: true,
+        toneMapping: THREE.ACESFilmicToneMapping, // ToneMapping
+        outputColorSpace: THREE.SRGBColorSpace,
+      }}
+      dpr={[1, 2]} // dpr = device pixel ratio; array of numbers, first is the default, second is the max
+      orthographic={false} // if true, camera is orthographic instead of perspective
+      camera={{
+        // camera settings
+        cameraSettings,
+      }}
+    >
+      <color attach="background" args={["#f0f0f0"]} />{" "}
+      {/* background color of the canvas */}
+      <ThreeScene />
+    </Canvas>
+  );
 }
 
-export default App
+export default App;
+
+/* 
+CANVAS COMPONENT
+Canvas is responsive to fit the parent node, so you can control how big it is by changing the parents width and height, in this case #canvas-container.
+*/
