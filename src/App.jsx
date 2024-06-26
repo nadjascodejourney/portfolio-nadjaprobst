@@ -9,23 +9,25 @@ function App() {
     fov: 45,
     near: 0.1,
     far: 200,
-    /* zoom: 100, */
   };
 
   return (
     <Canvas // component from R3F; wrapper around native Three renderer
       gl={{
+        // WebGLRenderer settings
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping, // ToneMapping
         outputColorSpace: THREE.SRGBColorSpace,
       }}
-      dpr={[1, 2]} // pixel ratio
-      orthographic={false}
+      dpr={[1, 2]} // dpr = device pixel ratio; array of numbers, first is the default, second is the max
+      orthographic={false} // if true, camera is orthographic instead of perspective
       camera={{
+        // camera settings
         cameraSettings,
       }}
     >
-      <color attach="background" args={["#f0f0f0"]} />
+      <color attach="background" args={["#f0f0f0"]} />{" "}
+      {/* background color of the canvas */}
       <ThreeScene />
     </Canvas>
   );

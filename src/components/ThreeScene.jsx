@@ -1,25 +1,14 @@
-import { useFrame } from "@react-three/fiber"; // useFrame is a hook; extend is a function to extend the R3F native classes and to create new declarative components with them (i.e. <orbitControls />  ); useThree is a hook to access the three.js scene and camera
+import { useFrame } from "@react-three/fiber"; // useFrame is a hook that allows you to run code on every frame
 import { useRef } from "react";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-import {
-  TransformControls,
-  OrbitControls,
-  Text,
-  Float,
-} from "@react-three/drei";
+import { OrbitControls, Text, Float } from "@react-three/drei";
 
-// extend({ OrbitControls }); // we extend the native OrbitControls class to be able to use it as a declarative component
-// we wirte it twice, because we need to import it and then tell how we want to name it
-
-const Experience = () => {
+const ThreeScene = () => {
   //% References
-  const groupRef = useRef(); // we create a ref to access the mesh directly
+  // we create a ref to access the mesh directly
   const planeRef = useRef();
-  const sphereRef = useRef();
 
   //% Animation
-
   /*   useFrame((state, delta) => {}); */
 
   //++ Here we return the JSX that will be rendered in the Canvas component
@@ -38,7 +27,7 @@ const Experience = () => {
         <planeGeometry />
       </mesh>
 
-      <Float speed={4} floatIntensity={2} floatingRange={3}>
+      <Float speed={2} floatIntensity={1} floatingRange={2}>
         <Text
           position={[0, 2, 0]}
           fontSize={0.5}
@@ -47,12 +36,13 @@ const Experience = () => {
           maxWidth={3}
         >
           Nadja Probst
-          <meshNormalMaterial />
+          {/* this is a material that shows the normals of the mesh */}
         </Text>
-        {/* this is a text in 3D space, default font family is Roboto, you could use your own by putting them in the public folder and then write the font property with the string of your font inside public here; it should be a woff file, and you can convert your file format here: https://transfonter.org/  */}
+        <Text fontSize={0.5}>Soon to be a R3F Portfolio!</Text>
+        {/* this is a text in 3D space, default font family is Roboto, use your own by putting them in the public folder and then write the font property with the string of your font inside public here; it should be a woff file, and you can convert your file format here: https://transfonter.org/  */}
       </Float>
     </>
   );
 };
 
-export default Experience;
+export default ThreeScene;
