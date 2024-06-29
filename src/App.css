@@ -1,10 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html,
 #root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+  background: linear-gradient(0deg, #060617 0%, #103039 100%);
+}
+
+#canvasContainer {
+  width: 300vw;
+  height: 100vh;
+  overflow-x: hidden; /* Optional for hiding scrollbar */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.canvasItem {
+  flex: 0 0 100vw; /* Each canvas section takes full viewport width */
+  height: 100vh;
 }
