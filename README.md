@@ -5,17 +5,17 @@ This project aims to develop a personal portfolio that showcases 3D webgraphics 
 ```markdown
 ## To Do´s:
 
-[ ] Create a timeline and set milestones with github Projects and keep it updated
+[✔️] Create a timeline and set milestones with github Projects and keep it updated
 [✔️] Read the Documentation of React Three Fiber
-[ ] Learn GSAP for Animations
-[ ] test branches to try out code
+[ ] Learn GSAP for Animations >> in Progress
+[✔️] test branches to try out code
 [✔️] Content Creation
 [✔️] Layout and Design in Figma
-[ ] Create a Prototype in Figma which is ready for Dev-Production
+[✔️] Create a Prototype in Figma which is ready for Dev-Production
 [✔️] Web-Optimization of the Imagery
 [✔️] Create a Repository and Set up the development environment
-[ ] Create basic codestructure of the portfolio (Routing, State Management, UI Components, Animations, etc.)
-[✔️ ] Integrate React Three Fiber for 3D elements
+[ ] Create basic codestructure of the portfolio (Routing, State Management, UI Components, Animations, etc.) >> in Progress
+[✔️] Integrate React Three Fiber for 3D elements
 [ ] Create 3D models with Blender
 [ ] Optimize for mobile devices
 [ ] plan feedback loops with testers
