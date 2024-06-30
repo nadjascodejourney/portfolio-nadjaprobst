@@ -1,15 +1,16 @@
-import { useRef, useEffect, useState } from "react";
-import { PerspectiveCamera, useScroll } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useRef, useState, useEffect } from "react";
+import { useScroll } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
 import LandingPage from "../pages/LandingPage";
+import About from "../pages/About";
+import TechStack from "../pages/TechStack";
 // import ThreeScene.module.css;
 import "../styles/ThreeScene.module.css";
 
 const ThreeScene = (props) => {
   //% Camera Ref
-  const cameraRef = useRef(); // create a reference to the camera
+  // const cameraRef = useRef(); // create a reference to the camera
   const ref = useRef();
-
   const data = useScroll(); // useScroll hook from drei
 
   useFrame(() => {
@@ -31,25 +32,34 @@ const ThreeScene = (props) => {
     const f = data.visible(2 / 3, 1 / 3);
     // The visible function can also receive a margin
     const g = data.visible(2 / 3, 1 / 3, 0.1);
-  });
 
-  //% Scroll-Based Movement
-  useEffect(() => {}, []);
+    //* Example of how to influence the rotation ot the group element in the Landingpage Component through the ref and the forwardRef function in the LandingPage component
+    // Animate the rotation of the object based on the scroll offset
+    /* const rotationSpeed = -data.offset * Math.PI * 4;
+    if (ref.current) {
+      ref.current.rotation.y = rotationSpeed;
+    } */
+
+    const scrollOffset = data.offset; // data.offset is the current scroll position, between 0 and 1, dampened
+
+    if (ref.current) {
+      ref.current.position.x = scrollOffset * -2; // move the group element in the x direction based on the scroll offset; offset means the current scroll position, which is multiplied by -2 to move the group element in the opposite direction of the scroll
+    }
+  });
 
   //++ Here we return the JSX that will be rendered in the Canvas component
   return (
     <>
-      <PerspectiveCamera
-        ref={cameraRef}
-        position={[3, 1, 5]}
-        fov={45}
-        near={0.1}
-        far={200}
-      />
-      <directionalLight intensity={4} position={[2, 4, 6]} />
-      <ambientLight intensity={1} />
-
-      <LandingPage ref={ref} {...props} />
+      {/* group the components, to position them accordingly */}
+      <group position={[0, 0, 0]}>
+        <LandingPage ref={ref} />
+      </group>
+      <group position={[19, 2.5, 0]}>
+        <About />
+      </group>
+      <group position={[40, 2.5, 0]}>
+        <TechStack />
+      </group>
     </>
   );
 };
