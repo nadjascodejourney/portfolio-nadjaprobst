@@ -102,6 +102,8 @@ const TechStack = forwardRef(function TechStack(props, ref) {
             </div>
           </section>
         </main>
+        {/*         <img src="/assets/graphics/Ground-3.svg" alt="" />
+         */}{" "}
       </Html>
     </>
   );

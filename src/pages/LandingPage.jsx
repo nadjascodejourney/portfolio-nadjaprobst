@@ -1,6 +1,7 @@
 import { Text, Float } from "@react-three/drei";
 import React from "react";
 import { forwardRef } from "react";
+import { Html } from "@react-three/drei";
 
 const LandingPage = forwardRef(function Landingpage(props, ref) {
   // forwardRef is a higher order function that allows you to access the ref of the parent component; i need to write React
@@ -23,6 +24,9 @@ const LandingPage = forwardRef(function Landingpage(props, ref) {
         </group>
         {/* this is a text in 3D space, default font family is Roboto, use your own by putting them in the public folder and then write the font property with the string of your font inside public here; it should be a woff file, and you can convert your file format here: https://transfonter.org/  */}
       </Float>
+      {/*  <Html position={[-5, -1, 0]}>
+        <img src="/assets/graphics/Ground.svg" alt="" />
+      </Html> */}
     </>
   );
 });

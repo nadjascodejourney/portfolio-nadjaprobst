@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { useScroll } from "@react-three/drei";
+import { ScrollControls, Scroll, useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import LandingPage from "../pages/LandingPage";
 import About from "../pages/About";
@@ -51,15 +51,35 @@ const ThreeScene = (props) => {
   return (
     <>
       {/* group the components, to position them accordingly */}
+      {/* Note: This whole group scrolls along, due to the Scrollcontainer in the parent App.jsx */}
       <group position={[0, 0, 0]}>
         <LandingPage ref={ref} />
+        {/* Note: Every element inside of these Child-Components of ThreeScene will follow along when scrolling */}
       </group>
-      <group position={[19, 2.5, 0]}>
+      <group position={[19, 3, 0]}>
         <About />
       </group>
-      <group position={[40, 2.5, 0]}>
+      <group position={[40, 3, 0]}>
         <TechStack />
       </group>
+
+      {/* This creates a fixed H1, which stays sticky at its position, no matter what */}
+      <ScrollControls>
+        <Scroll html>
+          <h1
+            style={{
+              position: "absolute", // position the H1 absolutely, stays fixed at its position
+              top: "90vh",
+              left: "30vw",
+              fontSize: "2vw",
+              color: "red",
+            }}
+          >
+            FixedScrollText {/* you can only write one word here */}
+            {/* TODO: Find out how to make clickable Links */}
+          </h1>
+        </Scroll>
+      </ScrollControls>
     </>
   );
 };

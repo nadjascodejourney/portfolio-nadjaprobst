@@ -6,6 +6,7 @@ import styles from "../styles/About.module.css"; // Import CSS module
 const About = forwardRef(function About(props, ref) {
   return (
     <>
+      {/* <Html>: The <Html> component from Drei is designed to render HTML elements directly onto the canvas. These HTML elements are not part of the 3D scene but are instead rendered on top of the canvas. This is useful for overlaying UI elements, text, or other web-based content over your 3D scene. */}
       <Html>
         <main className={styles.aboutWrapper}>
           <img
@@ -25,6 +26,8 @@ const About = forwardRef(function About(props, ref) {
             </div>
           </section>
         </main>
+        {/*         <img src="/assets/graphics/Ground-2.svg" alt="" />
+         */}
       </Html>
     </>
   );

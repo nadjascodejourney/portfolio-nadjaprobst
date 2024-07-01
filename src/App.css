@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+@import url("https://rsms.me/inter/inter.css"); /* Import the Inter font, which is a free and open source font designed by Rasmus Andersson. */
+
+/* Here we are giving 100% height and width to the Canvas so the canvas can take the whole screen. Also we are removing all the default margin and padding on the page. */
 body,
 html,
 #root {
@@ -14,6 +17,8 @@ html,
 body {
   overscroll-behavior: none;
   background: linear-gradient(0deg, #060617 0%, #103039 100%);
+  /* cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4="),
+    auto;  */ /*Importing a custom cursor*/
 }
 
 #canvasContainer {
