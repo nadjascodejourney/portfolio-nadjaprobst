@@ -26,8 +26,10 @@ const About = forwardRef(function About(props, ref) {
             </div>
           </section>
         </main>
-        {/*         <img src="/assets/graphics/Ground-2.svg" alt="" />
-         */}
+      </Html>
+
+      <Html fullscreen={true} position={[1, -3, 0]}>
+        <img src="/assets/graphics/Leaves-all-2.png" alt="" />
       </Html>
     </>
   );

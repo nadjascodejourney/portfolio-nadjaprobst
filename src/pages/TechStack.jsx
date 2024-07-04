@@ -6,6 +6,10 @@ import styles from "../styles/TechStack.module.css";
 const TechStack = forwardRef(function TechStack(props, ref) {
   return (
     <>
+      <Html fullscreen={true} position={[-1, -1, 0]}>
+        <img src="/assets/graphics/Tree.png" alt="" />
+      </Html>
+
       <Html>
         <main className={styles.techStackWrapper}>
           <section className={styles.techStackSection}>
@@ -102,8 +106,6 @@ const TechStack = forwardRef(function TechStack(props, ref) {
             </div>
           </section>
         </main>
-        {/*         <img src="/assets/graphics/Ground-3.svg" alt="" />
-         */}{" "}
       </Html>
     </>
   );

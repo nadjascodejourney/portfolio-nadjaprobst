@@ -15,22 +15,16 @@ html,
 }
 
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: none; /* Disabling the overscroll effect to prevent the page from bouncing when we reach the end of the page */
   background: linear-gradient(0deg, #060617 0%, #103039 100%);
   /* cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4="),
     auto;  */ /*Importing a custom cursor*/
 }
 
 #canvasContainer {
-  width: 300vw;
-  height: 100vh;
-  overflow-x: hidden; /* Optional for hiding scrollbar */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.canvasItem {
   flex: 0 0 100vw; /* Each canvas section takes full viewport width */
   height: 100vh;
+  overflow-x: hidden; /* Optional for hiding scrollbar */
+  padding: 0;
+  margin: 0;
 }
