@@ -9,7 +9,7 @@ import Overlay from "./layout/Overlay.jsx";
 
 function App() {
   return (
-    <>
+    <> 
       <Canvas // component from R3F; wrapper around native Three renderer
         gl={{
           antialias: true,
