@@ -1,22 +1,21 @@
 main.techStackWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 54px;
+  flex-direction: row;
   margin: 0;
-  width: 524px;
+  width: 60vw;
 }
 
 .techStackSection {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 1vh;
 }
 
 .techStackHeading {
   color: var(--normal-Text-Color, #ffffff);
   /*   font-family: Jost; */
-  font-size: 76px;
+  font-size: min(5vw, 76px);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -25,7 +24,7 @@ main.techStackWrapper {
 }
 
 .techStackTextBox {
-  width: 475px;
+  width: 50vw;
 }
 
 div.techStackListWrapper {
@@ -33,6 +32,7 @@ div.techStackListWrapper {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 15px;
+  width: 50vw;
 }
 
 ul.techStackList {
@@ -40,7 +40,7 @@ ul.techStackList {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 1vw;
   list-style: none;
   margin: 0;
   padding: 0;
