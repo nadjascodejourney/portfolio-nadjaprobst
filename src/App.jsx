@@ -1,4 +1,4 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import * as THREE from "three";
 import ThreeScene from "./components/ThreeScene";
@@ -25,7 +25,7 @@ function App() {
             <ScrollControls
               enabled={true}
               damping={0.1}
-              horizontal={true}
+              horizontal={false}
               // pages: One page is as tall as the viewport (default)
               pages={3} // number of pages to scroll through
             >

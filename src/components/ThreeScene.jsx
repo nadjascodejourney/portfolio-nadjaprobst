@@ -54,10 +54,10 @@ const ThreeScene = (props) => {
       <group position={[0, 0, 0]}>
         <LandingPage ref={ref} />
       </group>
-      <group position={[19, 2.5, 0]}>
+      <group position={[0, -4, 0]}>
         <About />
       </group>
-      <group position={[40, 2.5, 0]}>
+      <group position={[0, -8, 0]}>
         <TechStack />
       </group>
     </>
