@@ -1,0 +1,22 @@
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap: 20px;
+  width: 524px;
+  background-color: rgba(6, 72, 72, 0);
+}
+
+.mainHeading {
+  color: white;
+  font-size: 76px;
+  margin: 0;
+}
+
+.subHeading {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+}

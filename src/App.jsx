@@ -1,48 +1,31 @@
 import { Canvas } from "@react-three/fiber";
 import "./App.css";
 import * as THREE from "three";
-import ThreeScene from "./components/ThreeScene";
-import { ScrollControls, Scroll } from "@react-three/drei";
-import Overlay from "./layout/Overlay";
+import { Suspense } from "react"; // Suspense is a component that lets you “wait” for some code to load and declaratively specify a loading state (like a spinner) to show while the code is loading.
+
+//custom imports
+import ScrollAnimationWrapper from "./utils/ScrollAnimationWrapper.jsx";
+import Overlay from "./layout/Overlay.jsx";
 
 function App() {
   return (
-    <>
-      <Overlay />
-
-      <div id="canvasContainer">
-        <div className="canvasItem">
-          <Canvas // component from R3F; wrapper around native Three renderer
-            gl={{
-              // WebGLRenderer settings
-              antialias: true,
-              toneMapping: THREE.ACESFilmicToneMapping, // ToneMapping
-              outputColorSpace: THREE.SRGBColorSpace,
-            }}
-            // onPointerMissed={() => (state.clicked = null)} // onPointerMissed is called when the user clicks outside of the canvas, then the clicked state is set to null. This is useful for deselecting objects when clicking outside of them.
-            dpr={[1, 2]} // dpr = device pixel ratio; array of numbers, first is the default, second is the max
-          >
-            <ScrollControls
-              enabled={true}
-              damping={0.1}
-              horizontal={false}
-              // pages: One page is as tall as the viewport (default)
-              pages={3} // number of pages to scroll through
-            >
-              <Scroll>
-                <ThreeScene position={[1, 0, 0]} />
-              </Scroll>
-            </ScrollControls>
-          </Canvas>
-        </div>
-      </div>
+    <> 
+      <Canvas // component from R3F; wrapper around native Three renderer
+        gl={{
+          antialias: true,
+          toneMapping: THREE.ACESFilmicToneMapping, // ToneMapping
+          outputColorSpace: THREE.SRGBColorSpace,
+        }}
+        dpr={[1, 2]} // dpr = device pixel ratio;
+      >
+        <Suspense>
+          <ambientLight />
+          <directionalLight color="red" intensity={10} />
+          <ScrollAnimationWrapper />
+        </Suspense>
+      </Canvas>
     </>
   );
 }
 
 export default App;
-
-/* 
-CANVAS COMPONENT
-Canvas is responsive to fit the parent node, so you can control how big it is by changing the parents width and height, in this case #canvas-container.
-*/

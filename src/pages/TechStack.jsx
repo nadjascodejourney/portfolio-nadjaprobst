@@ -1,22 +1,33 @@
 import { Html } from "@react-three/drei";
 import React from "react";
-import { forwardRef } from "react";
 import styles from "../styles/TechStack.module.css";
 
-const TechStack = forwardRef(function TechStack(props, ref) {
+export const TechStack = () => {
   return (
     <>
-      <Html>
+      <Html
+        style={{
+          // transparent white background
+          fontSize: "min(3vw, 24px)",
+          width: "30vw",
+          top: "160vh",
+          transform: "translateX(-80%)",
+          color: "white",
+          margin: 0,
+          padding: 0,
+        }}
+      >
         <main className={styles.techStackWrapper}>
           <section className={styles.techStackSection}>
             <h1 className={styles.techStackHeading}>What I do</h1>
             <div className={styles.techStackTextBox}>
               <p>
-                is to code with a unique combination of creativity, visual and
+                {`is to code with a unique combination of creativity, visual and
                 conceptual thinking. I offer web solutions with the following
-                technologies:
+                technologies:`}
               </p>
             </div>
+
             <div className={styles.techStackListWrapper}>
               <ul className={styles.techStackList}>
                 <li>
@@ -105,6 +116,6 @@ const TechStack = forwardRef(function TechStack(props, ref) {
       </Html>
     </>
   );
-});
+};
 
 export default TechStack;
