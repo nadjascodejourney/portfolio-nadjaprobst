@@ -5,11 +5,12 @@ import { Suspense } from "react"; // Suspense is a component that lets you “wa
 
 //custom imports
 import ScrollAnimationWrapper from "./utils/ScrollAnimationWrapper.jsx";
-import Overlay from "./layout/Overlay.jsx";
+
+//TODO: Context for section and menu scrolling
 
 function App() {
   return (
-    <> 
+    <>
       <Canvas // component from R3F; wrapper around native Three renderer
         gl={{
           antialias: true,

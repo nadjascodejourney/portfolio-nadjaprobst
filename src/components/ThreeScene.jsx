@@ -1,5 +1,3 @@
- content-area-horizontal
-=======
 import { useRef, useState, useEffect } from "react";
 import { useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
@@ -67,4 +65,4 @@ const ThreeScene = (props) => {
 };
 
 export default ThreeScene;
-main
+main;

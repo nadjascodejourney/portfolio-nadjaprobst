@@ -10,7 +10,7 @@ export const TechStack = () => {
           // transparent white background
           fontSize: "min(3vw, 24px)",
           width: "30vw",
-          top: "160vh",
+          top: "175vh",
           transform: "translateX(-80%)",
           color: "white",
           margin: 0,
