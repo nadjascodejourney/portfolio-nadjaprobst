@@ -17,6 +17,10 @@ const ScrollManager = () => {
   const section = useSectionScrollStore((state) => state.section);
   const setSection = useSectionScrollStore((state) => state.setSection);
 
+  // fill the screen with the scroll element
+  scrollData.fill.classList.add("top-0");
+  scrollData.fill.classList.add("absolute");
+
   useEffect(() => {
     gsap.to(scrollData.el, {
       duration: 1,

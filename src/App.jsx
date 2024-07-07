@@ -5,17 +5,13 @@ import { Suspense } from "react"; // Suspense is a component that lets you “wa
 
 //custom imports
 import ScrollAnimationWrapper from "./utils/ScrollAnimationWrapper.jsx";
-
-// Context for section and menu scrolling
-import useSectionScrollStore from "./stores/useSectionScrollStore.js";
+import Menu from "./components/Menu.jsx";
 
 function App() {
-  const sectionsCount = useSectionScrollStore((state) => {
-    return state.sectionsCount; // get the state from the store
-  }); // only re-renders when the state changes => only retrieve the states, you actually need, not the whole store, because that would cause unnecessary re-renders, when something else in the store changes
-
   return (
     <>
+      <Menu />
+
       <Canvas // component from R3F; wrapper around native Three renderer
         gl={{
           antialias: true,

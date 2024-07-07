@@ -1,0 +1,61 @@
+.lineOne,
+.lineThree,
+.lineTwo {
+  /* bg-white */
+  background-color: #fff;
+  /* h-0.5 */
+  height: 3px;
+  /* rounded-md */
+  border-radius: 0.375rem;
+  /* w-full */
+  width: 100%;
+  /* transition-all */
+  transition-property: all; /* this makes the transition smooth */
+}
+
+.lineTwo {
+  margin-top: 0.33rem;
+  margin-bottom: 0.33rem;
+}
+
+.lineTwoHidden {
+  /* hidden */
+  display: none; /* this hides the line */
+}
+
+.lineRotatedandTranslated {
+  width: 70%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.lineThreeRotated {
+  width: 70%;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.buttonStyle {
+  background-color: magenta;
+  /* z-20 */
+  z-index: 20;
+  /* fixed */
+  position: fixed;
+  /* top-12 */
+  top: 3rem;
+  /* right-12 */
+  right: 3rem;
+  /* p-3 */
+  padding: 0.75rem;
+  /* w-11 */
+  width: 2.75rem;
+  /* h-11 */
+  height: 2.75rem;
+  /* rounded-md */
+  border-radius: 0.375rem;
+}
