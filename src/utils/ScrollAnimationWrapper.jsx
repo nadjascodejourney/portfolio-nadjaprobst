@@ -14,8 +14,16 @@ import { Sparkles } from "@react-three/drei";
 import Home from "../pages/Home.jsx";
 import About from "../pages/About.jsx";
 import TechStack from "../pages/TechStack.jsx";
+import ScrollManager from "./ScrollManager.jsx";
+
+// import context for sections
+import useSectionScrollStore from "../stores/useSectionScrollStore.js";
 
 const ScrollAnimationWrapper = () => {
+  const sectionsCount = useSectionScrollStore((state) => {
+    return state.sectionsCount;
+  });
+
   useFrame(({ mouse, camera }) => {
     camera.position.x = THREE.MathUtils.lerp(
       camera.position.x,
@@ -41,6 +49,7 @@ const ScrollAnimationWrapper = () => {
 
   return (
     <ScrollControls pages={4} horizontal={false}>
+      <ScrollManager />
       <Scroll>
         <Sparkles
           count={3000}
@@ -61,7 +70,6 @@ const ScrollAnimationWrapper = () => {
       <Scroll>
         <TechStack />
       </Scroll>
-      <Scroll></Scroll>
     </ScrollControls>
   );
 };
