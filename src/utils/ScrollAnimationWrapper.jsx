@@ -16,14 +16,7 @@ import About from "../pages/About.jsx";
 import TechStack from "../pages/TechStack.jsx";
 import ScrollManager from "./ScrollManager.jsx";
 
-// import context for sections
-import useSectionScrollStore from "../stores/useSectionScrollStore.js";
-
 const ScrollAnimationWrapper = () => {
-  const sectionsCount = useSectionScrollStore((state) => {
-    return state.sectionsCount;
-  });
-
   useFrame(({ mouse, camera }) => {
     camera.position.x = THREE.MathUtils.lerp(
       camera.position.x,
