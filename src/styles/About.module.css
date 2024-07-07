@@ -1,7 +1,7 @@
 .aboutWrapper {
   display: flex;
   flex-direction: row;
-  gap: 54px;
+  gap: 4vw;
   margin: 0;
 }
 
@@ -19,7 +19,7 @@
 .aboutHeading {
   color: var(--normal-Text-Color, #ffffff);
   /*   font-family: Jost; */
-  font-size: 76px;
+  font-size: min(5vw, 76px);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
