@@ -44,6 +44,12 @@ const Menu = () => {
           }`}
         />
       </button>
+
+      <nav
+        className={`${styles.navigationMenu} ${
+          onMenuOpen ? styles.menuIsShown : styles.menuIsHidden
+        }`}
+      ></nav>
     </>
   );
 };

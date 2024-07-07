@@ -1,3 +1,5 @@
+/* MENU BUTTON */
+
 .lineOne,
 .lineThree,
 .lineTwo {
@@ -58,4 +60,35 @@
   height: 2.75rem;
   /* rounded-md */
   border-radius: 0.375rem;
+}
+
+/* MENU ITSELF */
+
+.navigationMenu {
+  /* z-10 */
+  z-index: 10;
+  /* fixed */
+  position: fixed;
+  /* top-0 */
+  top: 0;
+  /* right-0 */
+  right: 0;
+  /* bottom-0 */
+  bottom: 0;
+  background-color: #fff;
+  /* transition-all */
+  transition-property: all;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuIsShown {
+  /* w-80 */
+  width: 10rem;
+}
+
+.menuIsHidden {
+  /* w-0 */
+  width: 0;
 }
