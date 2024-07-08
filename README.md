@@ -1,6 +1,6 @@
 # Personal Portfolio with React Three Fiber
 
-This project aims to develop a personal portfolio that showcases 3D webgraphics and interactive elements using React Three Fiber.
+This project aims to develop a personal portfolio that showcases 3D webgraphics and interactive elements using React Three Fiber and GSAP. 
 
 ```markdown
 ## To Do´s:
@@ -26,5 +26,3 @@ This project aims to develop a personal portfolio that showcases 3D webgraphics 
 [ ] Configure domain and SSL
 [ ] Documentation >> in Progress
 ```
-
-[Check out my Figma Layout](https://www.figma.com/design/dRQOMsktpYXnf3HAGKaMCI/Portfoliosite?node-id=61-217&m=dev)
