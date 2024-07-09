@@ -1,18 +1,17 @@
 import { Html } from "@react-three/drei";
 import React from "react";
 import styles from "../styles/TechStack.module.css";
+import fontstyles from "../styles/Fonts.module.css"; // Import CSS module
 
 export const TechStack = () => {
   return (
     <>
       <Html
+        className={fontstyles.jostFontLight}
         style={{
-          // transparent white background
-          fontSize: "min(3vw, 24px)",
           width: "30vw",
           top: "175vh",
           transform: "translateX(-80%)",
-          color: "white",
           margin: 0,
           padding: 0,
         }}
