@@ -1,0 +1,67 @@
+/* LAILA */
+
+@font-face {
+  font-family: "Laila";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/Laila/Laila-Regular.ttf);
+}
+
+.lailaFontRegular {
+  font-family: "Laila", sans-serif;
+  font-size: min(9vw, 18vw);
+}
+
+/*  JOST */
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 200;
+  src: url(/assets/fonts/Jost/static/Jost-ExtraLight.ttf);
+}
+
+.jostFontXLight {
+  font-family: "Jost", sans-serif;
+  font-size: min(7vw, 14vh);
+  color: "white";
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/assets/fonts/Jost/static/Jost-Light.ttf);
+}
+
+.jostFontLight {
+  font-family: "Jost", sans-serif;
+  font-size: min(3vw, 2vw);
+  color: "white";
+}
+
+/* PLAYWRIGHT */
+
+@font-face {
+  font-family: "Playwright";
+  src: url(/assets/fonts/Playwrite_AU_NSW/static/PlaywriteAUNSW-Regular.ttf);
+}
+
+.playwrightFontRegular {
+  font-family: "Playwright", sans-serif;
+  font-size: min(9vw, 18vw);
+  color: "white";
+}
+
+/* BODONI_MODA */
+
+/* @font-face {
+  font-family: "BodoniModa";
+  src: url(/assets/fonts/Bodoni_Moda_SC/static/BodoniModaSC_18pt-Bold.ttf);
+}
+
+.bodoniFontBold {
+  font-family: "BodoniModa", sans-serif;
+  font-size: min(9vw, 18vw);
+  color: "white";
+} */

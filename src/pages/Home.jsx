@@ -1,4 +1,6 @@
 import React from "react";
+// import font module css
+import fontstyles from "../styles/Fonts.module.css";
 
 const Home = () => {
   return (
@@ -11,24 +13,25 @@ const Home = () => {
         transform: "translateX(-50%)", // center horizontally!
 
         fontFamily: "sans-serif",
-        fontSize: "min(5vw, 72px)",
         textAlign: "center",
         width: "100vw",
       }}
     >
       <h1
+        className={fontstyles.playwrightFontRegular}
         style={{
           color: "#ffffff",
           margin: 0,
           whiteSpace: "nowrap",
+          // font module css
         }}
       >
         {`Nadja Probst`}
       </h1>
       <h2
+        className={fontstyles.jostFontXLight}
         style={{
-          color: "#ffffff",
-          margin: 0,
+          marginTop: "2vh",
           whiteSpace: "nowrap",
         }}
       >
