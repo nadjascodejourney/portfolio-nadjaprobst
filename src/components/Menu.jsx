@@ -44,6 +44,18 @@ const Menu = () => {
           }`}
         />
       </button>
+
+      <nav
+        className={`${styles.navigationMenu} ${
+          onMenuOpen ? styles.menuIsShown : styles.menuIsHidden
+        }`}
+      >
+        <ul>
+          <li>About</li>
+          <li>Techstack</li>
+          <li>Projects</li>
+        </ul>
+      </nav>
     </>
   );
 };
