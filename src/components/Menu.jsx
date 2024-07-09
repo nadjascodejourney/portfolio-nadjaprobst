@@ -49,7 +49,13 @@ const Menu = () => {
         className={`${styles.navigationMenu} ${
           onMenuOpen ? styles.menuIsShown : styles.menuIsHidden
         }`}
-      ></nav>
+      >
+        <ul>
+          <li>About</li>
+          <li>Techstack</li>
+          <li>Projects</li>
+        </ul>
+      </nav>
     </>
   );
 };

@@ -45,7 +45,7 @@
 .buttonStyle {
   background-color: magenta;
   /* z-20 */
-  z-index: 20;
+  z-index: 11;
   /* fixed */
   position: fixed;
   /* top-12 */
@@ -91,4 +91,9 @@
 .menuIsHidden {
   /* w-0 */
   width: 0;
+}
+
+.menuList {
+  background-color: blue;
+  z-index: 20;
 }
