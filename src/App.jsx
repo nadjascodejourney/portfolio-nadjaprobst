@@ -7,11 +7,17 @@ import { Suspense } from "react"; // Suspense is a component that lets you “wa
 import ScrollAnimationWrapper from "./utils/ScrollAnimationWrapper.jsx";
 import Menu from "./components/Menu.jsx";
 
+import useSectionScrollStore from "./stores/useSectionScrollStore.js";
+import menuOpenStore from "./stores/menuOpenStore.js";
+
 function App() {
+  /* States for the Menu; we get them from the zustand stores */
+  const setSection = useSectionScrollStore((state) => state.setSection);
+  const menuOpen = menuOpenStore((state) => state.menuOpen);
+  const setMenuOpen = menuOpenStore((state) => state.setMenuOpen);
+
   return (
     <>
-      <Menu />
-
       <Canvas // component from R3F; wrapper around native Three renderer
         gl={{
           antialias: true,
@@ -26,6 +32,11 @@ function App() {
           <ScrollAnimationWrapper />
         </Suspense>
       </Canvas>
+      <Menu
+        onSectionChanges={setSection}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
     </>
   );
 }

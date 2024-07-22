@@ -48,7 +48,7 @@ const About = () => {
             >
               {`
               If you find a gemstone, tab on it! They reveal more facts about this project and
-              my work. For example, you´ll find out what this website is built with and what my previous work experience is.`}
+              my work.`}
             </p>
           </section>
         </main>

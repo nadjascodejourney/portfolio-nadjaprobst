@@ -24,7 +24,7 @@ const ScrollManager = () => {
   useEffect(() => {
     gsap.to(scrollData.el, {
       duration: 1.5,
-      scrollTop: section * scrollData.el.clientHeight,
+      scrollTop: section * scrollData.el.clientHeight, // section multiplied by the height of the scroll element, which is the height of the screen
       onStart: () => {
         isAnimating.current = true;
       },
@@ -44,22 +44,23 @@ const ScrollManager = () => {
     const currentSection = Math.floor(
       scrollData.scroll.current * scrollData.pages
     ); // this gives us the current section as a number
+    // pages comes from the ScrollControls component, it is the number of pages we have
 
     // if the current scroll is bigger than the last croll and the current section === 0, then
     if (
       scrollData.scroll.current > lastScrollPosition.current &&
       currentSection === 0
     ) {
-      // we set the current section to 1
-      setSection(1);
+      // we set the current section to a certain value, which stands for the position of the next section
+      setSection(0.6);
     }
 
     if (
       scrollData.scroll.current < lastScrollPosition.current &&
-      scrollData.scroll.current < 1 / scrollData.pages
+      scrollData.scroll.current < 0.6 / scrollData.pages
     ) {
       setSection(0);
-    } // if the current scroll is smaller than the last scroll and the current scroll is smaller than 1 / data.pages, then we set the current section to 0
+    } // if the current scroll is smaller than the last scroll and the current scroll is smaller than 0.6 / data.pages, then we set the current section to 0
 
     lastScrollPosition.current = scrollData.scroll.current; // lastscrollposition = current scroll position
   });
