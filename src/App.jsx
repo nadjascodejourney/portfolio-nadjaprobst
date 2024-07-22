@@ -9,6 +9,7 @@ import Menu from "./components/Menu.jsx";
 
 import useSectionScrollStore from "./stores/useSectionScrollStore.js";
 import menuOpenStore from "./stores/menuOpenStore.js";
+import Overlay from "./layout/Overlay.jsx";
 
 function App() {
   /* States for the Menu; we get them from the zustand stores */
@@ -25,6 +26,8 @@ function App() {
           outputColorSpace: THREE.SRGBColorSpace,
         }}
         dpr={[1, 2]} // dpr = device pixel ratio;
+        shadows
+        camera={{ position: [0, 0, 5], fov: 70 }}
       >
         <Suspense>
           <ambientLight />

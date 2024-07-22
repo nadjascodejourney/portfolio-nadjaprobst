@@ -10,7 +10,7 @@ export const TechStack = () => {
         className={fontstyles.jostFontLight}
         style={{
           width: "30vw",
-          top: "175vh",
+          top: "340vh",
           transform: "translateX(-80%)",
           margin: 0,
           padding: 0,

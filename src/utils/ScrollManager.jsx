@@ -60,7 +60,7 @@ const ScrollManager = () => {
       scrollData.scroll.current < 1 / scrollData.pages
     ) {
       setSection(0);
-    } // if the current scroll is smaller than the last scroll and the current scroll is smaller than 0.6 / data.pages, then we set the current section to 0
+    } // if the current scroll is smaller than the last scroll and the current scroll is smaller than 1 / data.pages, then we set the current section to 0
 
     lastScrollPosition.current = scrollData.scroll.current; // lastscrollposition = current scroll position
   });

@@ -1,3 +1,6 @@
+/* This component renders individual menu buttons.
+ */
+
 import React from "react";
 import styles from "../styles/MenuButton.module.css";
 

@@ -14,6 +14,7 @@ import { Sparkles } from "@react-three/drei";
 import Home from "../pages/Home.jsx";
 import About from "../pages/About.jsx";
 import TechStack from "../pages/TechStack.jsx";
+import Projects from "../pages/Projects.jsx";
 import ScrollManager from "./ScrollManager.jsx";
 
 const ScrollAnimationWrapper = () => {
@@ -41,7 +42,7 @@ const ScrollAnimationWrapper = () => {
   });
 
   return (
-    <ScrollControls pages={4} horizontal={false}>
+    <ScrollControls pages={5} horizontal={false}>
       <ScrollManager />
       <Scroll>
         <Sparkles
@@ -62,6 +63,9 @@ const ScrollAnimationWrapper = () => {
       </Scroll>
       <Scroll>
         <TechStack />
+      </Scroll>
+      <Scroll>
+        <Projects />
       </Scroll>
     </ScrollControls>
   );

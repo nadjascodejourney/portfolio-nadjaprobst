@@ -1,3 +1,5 @@
+/* This component handles the menu state (open/close) and triggers section changes. */
+
 import React from "react";
 
 // import styles
@@ -38,9 +40,9 @@ const Menu = (props) => {
       >
         <div className={`${styles.menuList}`}>
           <MenuButton label="Home" onClick={() => onSectionChanges(0)} />
-          <MenuButton label="About" onClick={() => onSectionChanges(0.5)} />
-          <MenuButton label="Techstack" onClick={() => onSectionChanges(1)} />
-          <MenuButton label="Projects" onClick={() => onSectionChanges(2)} />
+          <MenuButton label="About" onClick={() => onSectionChanges(1)} />
+          <MenuButton label="Techstack" onClick={() => onSectionChanges(2)} />
+          <MenuButton label="Projects" onClick={() => onSectionChanges(3)} />
         </div>
       </nav>
     </div>

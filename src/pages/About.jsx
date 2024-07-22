@@ -11,7 +11,7 @@ const About = () => {
         style={{
           // transparent white background
           width: "30vw",
-          top: "100vh",
+          top: "150vh",
           transform: "translateX(-80%)",
           margin: 0,
           padding: 0,
@@ -48,7 +48,7 @@ const About = () => {
             >
               {`
               If you find a gemstone, tab on it! They reveal more facts about this project and
-              my work.`}
+              my work. For example, you´ll find out what this website is built with and what my previous work experience is.`}
             </p>
           </section>
         </main>
