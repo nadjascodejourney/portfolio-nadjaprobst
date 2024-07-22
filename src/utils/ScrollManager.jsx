@@ -52,12 +52,12 @@ const ScrollManager = () => {
       currentSection === 0
     ) {
       // we set the current section to a certain value, which stands for the position of the next section
-      setSection(0.6);
+      setSection(1);
     }
 
     if (
       scrollData.scroll.current < lastScrollPosition.current &&
-      scrollData.scroll.current < 0.6 / scrollData.pages
+      scrollData.scroll.current < 1 / scrollData.pages
     ) {
       setSection(0);
     } // if the current scroll is smaller than the last scroll and the current scroll is smaller than 0.6 / data.pages, then we set the current section to 0

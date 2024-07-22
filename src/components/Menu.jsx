@@ -2,12 +2,13 @@ import React from "react";
 
 // import styles
 import styles from "../styles/Menu.module.css";
+import MenuButton from "./MenuButton";
 
 const Menu = (props) => {
   const { onSectionChanges, menuOpen, setMenuOpen } = props;
 
   return (
-    <>
+    <div>
       <button
         onClick={() => setMenuOpen(!menuOpen)}
         className={styles.buttonStyle}
@@ -30,19 +31,19 @@ const Menu = (props) => {
           }`}
         />
       </button>
-
       <nav
         className={`${styles.navigationMenu} ${
           menuOpen ? styles.menuIsShown : styles.menuIsHidden
         }`}
       >
-        <ul className={`${styles.menuList}`}>
-          <li>About</li>
-          <li>Techstack</li>
-          <li>Projects</li>
-        </ul>
+        <div className={`${styles.menuList}`}>
+          <MenuButton label="Home" onClick={() => onSectionChanges(0)} />
+          <MenuButton label="About" onClick={() => onSectionChanges(0.5)} />
+          <MenuButton label="Techstack" onClick={() => onSectionChanges(1)} />
+          <MenuButton label="Projects" onClick={() => onSectionChanges(2)} />
+        </div>
       </nav>
-    </>
+    </div>
   );
 };
 

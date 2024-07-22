@@ -33,6 +33,7 @@ function App() {
         </Suspense>
       </Canvas>
       <Menu
+        style={{ zIndex: 1000 }}
         onSectionChanges={setSection}
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
