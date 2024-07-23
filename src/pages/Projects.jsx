@@ -17,21 +17,25 @@ const Projects = () => {
         }}
       >
         <main className={styles.projectWrapper}>
-          <section>
-            <h1 className={fontstyles.jostFontLight}>Projects</h1>
-            <p>
-              {`Here you can see a selection of my projects. Click on the bubbles to find out more about the project and the technologies used.`}
-            </p>
-            <div>
-              <div className={styles.projectCard}>
-                <h3>Meowstery</h3>
-              </div>
-              <div className={styles.projectCard}>
-                <h3>BirdsofPrey</h3>
-              </div>
-              <div className={styles.projectCard}>
-                <h3>Quizzell</h3>
-              </div>
+          <h1 className={fontstyles.jostFontLight}>Projects</h1>
+          <p>
+            {`Here you can see a selection of my projects. Click on the bubbles to find out more about the project and the technologies used.`}
+          </p>
+          <section className={styles.cardContainer}>
+            <div className={styles.projectCard}>
+              <h3>Meowstery</h3>
+            </div>
+            <div className={styles.projectCard}>
+              <h3>BirdsofPrey</h3>
+            </div>
+            <div className={styles.projectCard}>
+              <h3>Quizzell</h3>
+            </div>
+            <div className={styles.projectCard}>
+              <h3>RaptorAPI</h3>
+            </div>
+            <div className={styles.projectCard}>
+              <h3>Scroll3D</h3>
             </div>
           </section>
         </main>
