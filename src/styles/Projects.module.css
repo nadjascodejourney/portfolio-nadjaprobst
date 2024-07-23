@@ -1,6 +1,5 @@
 .projectWrapper {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
   width: 50vw;
   margin: 0;
@@ -8,7 +7,7 @@
 
 /* Style for all the Projectcards */
 .projectCard {
-  background-color: white;
+  border: 1px solid white;
   color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

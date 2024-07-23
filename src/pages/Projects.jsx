@@ -24,13 +24,13 @@ const Projects = () => {
             </p>
             <div>
               <div className={styles.projectCard}>
-                <h3>Project 1</h3>
+                <h3>Meowstery</h3>
               </div>
               <div className={styles.projectCard}>
-                <h3>Project 2</h3>
+                <h3>BirdsofPrey</h3>
               </div>
               <div className={styles.projectCard}>
-                <h3>Project 3</h3>
+                <h3>Quizzell</h3>
               </div>
             </div>
           </section>
