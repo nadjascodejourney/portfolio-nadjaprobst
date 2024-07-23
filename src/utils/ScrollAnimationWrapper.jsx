@@ -16,6 +16,7 @@ import About from "../pages/About.jsx";
 import TechStack from "../pages/TechStack.jsx";
 import Projects from "../pages/Projects.jsx";
 import ScrollManager from "./ScrollManager.jsx";
+import Contact from "../pages/Contact.jsx";
 
 const ScrollAnimationWrapper = () => {
   useFrame(({ mouse, camera }) => {
@@ -66,6 +67,9 @@ const ScrollAnimationWrapper = () => {
       </Scroll>
       <Scroll>
         <Projects />
+      </Scroll>
+      <Scroll>
+        <Contact />
       </Scroll>
     </ScrollControls>
   );

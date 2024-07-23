@@ -1,15 +1,29 @@
 .projectWrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 50vw;
   margin: 0;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vh;
 }
 
 /* Style for all the Projectcards */
 .projectCard {
   border: 1px solid white;
-  color: black;
+  color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  border-radius: 19px;
+  width: 273px;
+  /* flex for card content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
