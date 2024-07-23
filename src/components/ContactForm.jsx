@@ -12,17 +12,27 @@ const ContactForm = () => {
       </p>
       <form
         className={styles.contactForm}
-        action="https://formspree.io/f/xqkwzgqj"
-        method="POST"
+        /* action="https://formspree.io/f/xqkwzgqj"
+        method="POST" */
       >
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="firstname">First Name:</label>
         <input
           type="text"
-          id="name"
-          name="name"
-          placeholder="Your name"
+          id="firstname"
+          name="firstname"
+          placeholder="Your firstname"
           required
         />
+
+        <label htmlFor="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Your lastname"
+          required
+        />
+
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -31,6 +41,16 @@ const ContactForm = () => {
           placeholder="Your email"
           required
         />
+
+        <label htmlFor="subject">Subject:</label>
+        <input
+          type="text"
+          id="szbject"
+          name="subject"
+          placeholder="Subject of your Message"
+          required
+        />
+
         <label htmlFor="message">Message:</label>
         <textarea
           id="message"

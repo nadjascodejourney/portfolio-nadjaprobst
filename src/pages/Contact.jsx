@@ -11,17 +11,20 @@ const Contact = () => {
       <Html
         className={fontstyles.jostFontLight}
         style={{
-          width: "30vw",
+          width: "50vw",
           top: "630vh",
-          transform: "translateX(-80%)",
+          transform: "translateX(-50%)",
           margin: 0,
           padding: 0,
+          border: "2px solid #aa41fb",
+          borderRadius: "1rem",
+          padding: "2rem",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        <main className={styles.contactWrapper}>
-          <h1 className={fontstyles.jostFontLight}>Let´s connect!</h1>
-          <ContactForm />
-        </main>
+        <h1 className={fontstyles.jostFontLight}>Let´s connect!</h1>
+        <ContactForm />
       </Html>
     </>
   );
