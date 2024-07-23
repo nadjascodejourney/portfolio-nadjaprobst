@@ -1,0 +1,21 @@
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 20px 20px 20px;
+  border-radius: 20px;
+  border: 2px solid #aa41fb;
+  backdrop-filter: blur(190px);
+}
+
+.formWrapper {
+  display: flex;
+  width: 483px;
+  height: 648px;
+  padding: 40px 40px 25px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  flex-shrink: 0;
+  border: 1px solid white;
+}

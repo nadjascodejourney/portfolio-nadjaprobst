@@ -43,6 +43,7 @@ const Menu = (props) => {
           <MenuButton label="About" onClick={() => onSectionChanges(1)} />
           <MenuButton label="Techstack" onClick={() => onSectionChanges(2)} />
           <MenuButton label="Projects" onClick={() => onSectionChanges(3)} />
+          <MenuButton label="Contact" onClick={() => onSectionChanges(4)} />
         </div>
       </nav>
     </div>
