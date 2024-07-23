@@ -5,35 +5,40 @@ import fontstyles from "../styles/Fonts.module.css";
 const ContactForm = () => {
   return (
     <div className={styles.formWrapper}>
-      <p className={fontstyles.jostFontLight}>
-        Whether you have a project in mind or you just want to say hello, I'd
-        love to hear from you! Fill out the form below, and I'll get back to you
-        as soon as possible.
+      <p className={styles.contactParagraph}>
+        Whether you have a project in mind, a job to work on or you just want to
+        say hello, I'd love to hear from you! Fill out the form below, and I'll
+        get back to you as soon as possible.
       </p>
+
       <form
         className={styles.contactForm}
         /* action="https://formspree.io/f/xqkwzgqj"
         method="POST" */
       >
-        <label htmlFor="firstname">First Name:</label>
-        <input
-          type="text"
-          id="firstname"
-          name="firstname"
-          placeholder="Your firstname"
-          required
-        />
+        <div className={styles.nameInput}>
+          <label htmlFor="firstname"></label>
+          <input
+            className={styles.contactInput}
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Your firstname"
+            required
+          />
 
-        <label htmlFor="lastname">Last Name:</label>
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          placeholder="Your lastname"
-          required
-        />
+          <label htmlFor="lastname"></label>
+          <input
+            className={styles.contactInput}
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Your lastname"
+            required
+          />
+        </div>
 
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email"></label>
         <input
           type="email"
           id="email"
@@ -42,23 +47,26 @@ const ContactForm = () => {
           required
         />
 
-        <label htmlFor="subject">Subject:</label>
+        <label htmlFor="subject"></label>
         <input
           type="text"
           id="szbject"
           name="subject"
-          placeholder="Subject of your Message"
+          placeholder="Subject"
           required
         />
 
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="message"></label>
         <textarea
           id="message"
           name="message"
           placeholder="Your message"
           required
         ></textarea>
-        <button type="submit">Send</button>
+
+        <button className={styles.contactBtn} type="submit">
+          Send
+        </button>
       </form>
     </div>
   );

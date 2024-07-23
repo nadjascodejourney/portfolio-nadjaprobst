@@ -10,6 +10,7 @@ main.techStackWrapper {
   flex-direction: column;
   align-items: flex-start;
   gap: 1vh;
+  width: 50vw;
 }
 
 .techStackHeading {
@@ -20,10 +21,6 @@ main.techStackWrapper {
   line-height: normal;
   padding: 0;
   margin: 0;
-}
-
-.techStackTextBox {
-  width: 50vw;
 }
 
 div.techStackListWrapper {

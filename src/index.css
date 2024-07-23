@@ -3,6 +3,12 @@
   line-height: 1.5;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
+  /* border box */
+  box-sizing: border-box;
+
+  /* colors */
+  --normal-text-color: #ffffff;
+  --button-gradient: linear-gradient(90deg, #13123e 0%, #972299 117.18%);
 }
 
 a {
