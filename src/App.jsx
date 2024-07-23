@@ -7,11 +7,18 @@ import { Suspense } from "react"; // Suspense is a component that lets you “wa
 import ScrollAnimationWrapper from "./utils/ScrollAnimationWrapper.jsx";
 import Menu from "./components/Menu.jsx";
 
+import useSectionScrollStore from "./stores/useSectionScrollStore.js";
+import menuOpenStore from "./stores/menuOpenStore.js";
+import Overlay from "./layout/Overlay.jsx";
+
 function App() {
+  /* States for the Menu; we get them from the zustand stores */
+  const setSection = useSectionScrollStore((state) => state.setSection);
+  const menuOpen = menuOpenStore((state) => state.menuOpen);
+  const setMenuOpen = menuOpenStore((state) => state.setMenuOpen);
+
   return (
     <>
-      <Menu />
-
       <Canvas // component from R3F; wrapper around native Three renderer
         gl={{
           antialias: true,
@@ -19,6 +26,8 @@ function App() {
           outputColorSpace: THREE.SRGBColorSpace,
         }}
         dpr={[1, 2]} // dpr = device pixel ratio;
+        shadows
+        camera={{ position: [0, 0, 5], fov: 70 }}
       >
         <Suspense>
           <ambientLight />
@@ -26,6 +35,12 @@ function App() {
           <ScrollAnimationWrapper />
         </Suspense>
       </Canvas>
+      <Menu
+        style={{ zIndex: 1000 }}
+        onSectionChanges={setSection}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
     </>
   );
 }

@@ -1,0 +1,15 @@
+.menuButton {
+  background-color: darkmagenta;
+  cursor: pointer;
+  /* transition-colors */
+  transition-property: color; /* this makes the transition smooth */
+  color: white;
+  border: 1px solid transparent;
+}
+
+.menuButton:hover {
+  border-color: #646cff;
+}
+.menuButton:focus {
+  border-color: #646cff;
+}

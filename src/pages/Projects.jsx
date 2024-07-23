@@ -1,0 +1,43 @@
+import { Html } from "@react-three/drei";
+import React from "react";
+import fontstyles from "../styles/Fonts.module.css";
+import styles from "../styles/Projects.module.css";
+
+const Projects = () => {
+  return (
+    <>
+      <Html
+        className={fontstyles.jostFontLight}
+        style={{
+          width: "30vw",
+          top: "450vh",
+          transform: "translateX(-80%)",
+          margin: 0,
+          padding: 0,
+        }}
+      >
+        <main className={styles.projectWrapper}>
+          <section>
+            <h1 className={fontstyles.jostFontLight}>Projects</h1>
+            <p>
+              {`Here you can see a selection of my projects. Click on the bubbles to find out more about the project and the technologies used.`}
+            </p>
+            <div>
+              <div className={styles.projectCard}>
+                <h3>Project 1</h3>
+              </div>
+              <div className={styles.projectCard}>
+                <h3>Project 2</h3>
+              </div>
+              <div className={styles.projectCard}>
+                <h3>Project 3</h3>
+              </div>
+            </div>
+          </section>
+        </main>
+      </Html>
+    </>
+  );
+};
+
+export default Projects;

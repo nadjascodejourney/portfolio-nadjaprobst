@@ -11,7 +11,7 @@ const About = () => {
         style={{
           // transparent white background
           width: "30vw",
-          top: "100vh",
+          top: "150vh",
           transform: "translateX(-80%)",
           margin: 0,
           padding: 0,

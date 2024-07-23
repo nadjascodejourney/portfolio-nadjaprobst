@@ -10,7 +10,6 @@ export const Overlay = () => {
           pointerEvents: "none",
           top: 40,
           left: 40,
-          fontSize: "13px",
           width: "200px",
           height: "100px",
         }}
@@ -18,7 +17,7 @@ export const Overlay = () => {
         {/* TODO: issue: links are not clickable, find out why */}
         <a
           href="https://github.com/nadjascodejourney"
-          style={{ position: "absolute", top: 10, left: 40, fontSize: "13px" }}
+          style={{ position: "absolute", top: 10, left: 40, fontSize: "130px" }}
         >
           Nadja Probst
         </a>

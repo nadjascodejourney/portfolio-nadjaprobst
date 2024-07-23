@@ -1,62 +1,51 @@
-import React from "react";
+/* This component handles the menu state (open/close) and triggers section changes. */
 
-// Context for section and menu
-import useSectionScrollStore from "../stores/useSectionScrollStore.js";
-import menuOpenStore from "../stores/menuOpenStore.js";
+import React from "react";
 
 // import styles
 import styles from "../styles/Menu.module.css";
+import MenuButton from "./MenuButton";
 
-const Menu = () => {
-  const onSectionChanges = useSectionScrollStore((state) => {
-    return state.sectionsCount;
-  });
-
-  const onMenuOpen = menuOpenStore((state) => {
-    return state.menuOpen;
-  });
-
-  const setMenuOpen = menuOpenStore((state) => {
-    return state.setMenuOpen;
-  });
+const Menu = (props) => {
+  const { onSectionChanges, menuOpen, setMenuOpen } = props;
 
   return (
-    <>
+    <div>
       <button
-        onClick={() => setMenuOpen(!onMenuOpen)}
+        onClick={() => setMenuOpen(!menuOpen)}
         className={styles.buttonStyle}
       >
         <div
           className={`${styles.lineOne} ${
-            onMenuOpen ? styles.lineRotatedandTranslated : ""
+            menuOpen ? styles.lineRotatedandTranslated : ""
           }`}
         />
 
         <div
           className={`${styles.lineTwo} ${
-            onMenuOpen ? styles.lineTwoHidden : ""
+            menuOpen ? styles.lineTwoHidden : ""
           }`}
         />
 
         <div
           className={`${styles.lineThree} ${
-            onMenuOpen ? styles.lineThreeRotated : ""
+            menuOpen ? styles.lineThreeRotated : ""
           }`}
         />
       </button>
-
       <nav
         className={`${styles.navigationMenu} ${
-          onMenuOpen ? styles.menuIsShown : styles.menuIsHidden
+          menuOpen ? styles.menuIsShown : styles.menuIsHidden
         }`}
       >
-        <ul>
-          <li>About</li>
-          <li>Techstack</li>
-          <li>Projects</li>
-        </ul>
+        <div className={`${styles.menuList}`}>
+          <MenuButton label="Home" onClick={() => onSectionChanges(0)} />
+          <MenuButton label="About" onClick={() => onSectionChanges(1)} />
+          <MenuButton label="Techstack" onClick={() => onSectionChanges(2)} />
+          <MenuButton label="Projects" onClick={() => onSectionChanges(3)} />
+        </div>
       </nav>
-    </>
+    </div>
   );
 };
 

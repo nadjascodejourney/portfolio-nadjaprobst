@@ -1,9 +1,8 @@
-/* MENU BUTTON */
+/* MENU BUTTON (HAMBURGER MENU) */
 
 .lineOne,
 .lineThree,
 .lineTwo {
-  /* bg-white */
   background-color: #fff;
   /* h-0.5 */
   height: 3px;
@@ -35,7 +34,6 @@
 
 .lineThreeRotated {
   width: 70%;
-
   transform: translate(-50%, -50%) rotate(45deg);
   position: absolute;
   left: 50%;
@@ -43,13 +41,11 @@
 }
 
 .buttonStyle {
-  background-color: magenta;
-  /* z-20 */
+  background-color: #972299;
   z-index: 11;
-  /* fixed */
   position: fixed;
   /* top-12 */
-  top: 3rem;
+  top: 2.5rem;
   /* right-12 */
   right: 3rem;
   /* p-3 */
@@ -65,35 +61,63 @@
 /* MENU ITSELF */
 
 .navigationMenu {
-  /* z-10 */
   z-index: 10;
-  /* fixed */
   position: fixed;
-  /* top-0 */
   top: 0;
-  /* right-0 */
-  right: 0;
-  /* bottom-0 */
-  bottom: 0;
-  background-color: #fff;
-  /* transition-all */
+  right: 0; /* Position to the left of the button */
+  background: linear-gradient(0deg, #060617b3 25%, #103039b0 100%);
   transition-property: all;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .menuIsShown {
-  /* w-80 */
-  width: 10rem;
+  width: 10vw;
+  height: 100%;
 }
-
 .menuIsHidden {
-  /* w-0 */
   width: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 .menuList {
-  background-color: blue;
-  z-index: 20;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 7rem;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+@media (max-width: 768px) {
+  .navigationMenu {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .menuList {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .menuIsShown {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonStyle {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
 }
